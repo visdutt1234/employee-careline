@@ -1,0 +1,32 @@
+.dashBig_Card {
+  width: 100%;
+  background: #fff;
+  height: 405px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  min-height: 404px;
+  padding: 20px 10px 20px 36px;
+  position: relative;
+  h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    text-align: left;
+    display: block;
+    padding: 5px 0 25px 0;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      left: 0;
+      bottom: 15px;
+      opacity: 0.3;
+    }
+  }
+}

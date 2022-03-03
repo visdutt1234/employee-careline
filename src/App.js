@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.scss";
+// import Header from "./Components/Header/Header";
+// import SideMenu from "./Components/SideMenu/SideMenu";
+// import Layout from "./Components/Layout/Layout";
+import { useState } from "react";
+import Navigation from "./Components/Navigation/Navigation";
+import SectionCard from "./Components/SectionCard/SectionCard";
 
-function App() {
+function App() {  
+  // const [openMenu, setOpenMenu] = useState(false);
+  // const handleOpenMenu = () => {
+  //   openMenu ? setOpenMenu(false) : setOpenMenu(true);
+  // }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Header cb={handleOpenMenu} />
+      <main>
+        <SideMenu isOpen={openMenu} />
+        <Layout />
+      </main> */}
+
+      <Navigation/>
+      <SectionCard/>
+    </>
   );
 }
 
