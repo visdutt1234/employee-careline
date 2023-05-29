@@ -1,14 +1,17 @@
 import { faCalculator } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { Component, useContext } from "react";
+import userContext from "../ForContext/ForContext";
 import "./SideCard.scss";
 
 const SideCard = (props) => {
-  let item  = props.item;
+  let item = props.item;
 
+  const user = useContext(userContext);
+  
   return (
     <a className="side_card" href="#" title="">
-      <h2>{item.heading}</h2>
+      <h2>{user}</h2>
       <div className="holder">
         <span className="icon">
           <FontAwesomeIcon icon={faCalculator} />
@@ -16,7 +19,10 @@ const SideCard = (props) => {
         <span className="count">
           {item.count}
           <span className="bar-fill">
-            <span style={{"backgroundColor": item.bgColor}} className="fill-bg"></span>
+            <span
+              style={{ backgroundColor: item.bgColor }}
+              className="fill-bg"
+            ></span>
           </span>
           <span className="name-cd">{item.name}</span>
         </span>

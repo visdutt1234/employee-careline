@@ -1,25 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Card.scss";
 
-const Card = () => {
-  const [newData, setNewData] = useState(100);
+const defaultProps = {
+  name: "sonu"
+}
 
-  useEffect(() => {
-    setNewData(500);
-    setTimeout(() => {
-      console.log("Hello Hello");
-    }, 1000)
-   
-  }, [5])
+const Card = (props) => {
+  const [newData, setNewData] = useState(100);
+  let date = new Date();
+
+
+  setInterval(() => {
+    date = new Date();
+  }, 1000)
+
 
   
 
   return (
     <div className="dashBig_Card">
-      <h3>Birthdays {newData} </h3>
-      <div className="card_content">vishnu dtttttttttt</div>
+      <h3>Birthdays {newData} {date.toLocaleTimeString()}</h3>
+      <div className="card_content">{props.name}</div>
     </div>
   );
 };
 
+Card.defaultProps = defaultProps;
 export default Card;

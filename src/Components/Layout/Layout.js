@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DashBoard from '../DashBoard/DashBoard';
 import "./Layout.scss";
 
-function Layout() {
+function Layout(props) {
   const [points, setPoints] = useState(100);
 
   setTimeout(() => {
@@ -10,7 +10,7 @@ function Layout() {
   }, 1000);
 
   return <div className='layout-container'>
-      <DashBoard points={points}/>
+      <DashBoard points={points} userName={props.userName}/>
   </div>;
 }
 
